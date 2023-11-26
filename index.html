@@ -4,11 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-
+    <div class="container">
+        <div class="headclass">
+            <h2>Generate a</h2>
+            <h1>Random Password</h1>
+        </div>
+        <div class="content">
+            <input type="text" id="inputext" readonly placeholder="Click Generate Password">
+            <button id="copy-text" onclick="copy()">
+                <img src="images/copy.png" alt=""></button>
+        </div>
+        <div class="generate">
+            <button id="generate-password" onclick="generate()">
+                <img src="images/generate.png" alt=""> Generate Password</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

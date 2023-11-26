@@ -8,7 +8,8 @@ const symbol = "@#$%^()_+~|}{[]></-=";
 const allchar = upperCase + lowerCase + number + symbol;
 function copy() {
     inputext.select();
-    document.execCommand("copy");
+    // document.execCommand("copy");  ---> this execCommand() function is deprecated. Hence used below function
+    navigator.clipboard.writeText(inputext.value);
 }
 
 function generate() {

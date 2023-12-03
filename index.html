@@ -1,31 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="container">
-        <div class="headclass">
-            <h2>Generate a</h2>
-            <h1>Random Password</h1>
+      <div class="headclass">
+        <h2>Generate a</h2>
+        <h1>Random Password</h1>
+      </div>
+      <div class="length">
+        <input
+          type="range"
+          min="12"
+          max="50"
+          id="length"
+          value="12"
+          oninput="rangeFunc()"
+        />
+        <input
+          type="number"
+          value="12"
+          min="12"
+          max="50"
+          id="number"
+          oninput="numFunc()"
+        />
+      </div>
+      <!-- <div class="customize">
+        <div class="checkbox-name-class">
+          <input type="checkbox" name="" id="upper" />
+          <label for="upper">Uppercase</label>
         </div>
-        <div class="content">
-            <input type="text" id="inputext" readonly placeholder="Click Generate Password">
-            <button id="copy-text" onclick="copy()">
-                <img src="images/copy.png" alt=""></button>
+        <div class="checkbox-name-class">
+          <input type="checkbox" name="" id="lower" />
+          <label for="lower">Lowercase</label>
         </div>
-        <div class="generate">
-            <button id="generate-password" onclick="generate()">
-                <img src="images/generate.png" alt=""> Generate Password</button>
+        <div class="checkbox-name-class">
+          <input type="checkbox" name="" id="num" />
+          <label for="num">Number</label>
         </div>
+        <div class="checkbox-name-class">
+          <input type="checkbox" name="" id="sym" />
+          <label for="sym">Symbol</label>
+        </div>
+      </div> -->
+
+      <!-- checkbox functionality is on hold as it feels unnecessary.-->
+
+      <div class="content">
+        <input
+          type="text"
+          id="inputext"
+          readonly
+          placeholder="Click Generate Password"
+        />
+        <button id="copy-text" onclick="copy()">
+          <img src="images/copy.png" alt="" />
+        </button>
+      </div>
+      <div class="generate">
+        <button id="generate-password" onclick="generate()">
+          <img src="images/generate.png" alt="" /> Generate Password
+        </button>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
